@@ -1,1 +1,171 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  color: #202020;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #222;
+  border-radius: 4px;
+  background: #222;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background: white;
+  padding: 8px;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+}
+
+.centered,
+.auth-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 20px;
+}
+
+.auth-form {
+  display: grid;
+  width: min(100%, 360px);
+  gap: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  padding: 24px;
+}
+
+.auth-form h1,
+.header h1,
+.column h2,
+.task-card h3 {
+  margin: 0;
+}
+
+.link-button {
+  border: 0;
+  background: transparent;
+  color: #174ea6;
+}
+
+.app-shell {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.header span {
+  color: #666;
+}
+
+.create-form {
+  display: grid;
+  grid-template-columns: 2fr 3fr auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.column {
+  min-height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #eee;
+  padding: 12px;
+}
+
+.column h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.task-card {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  background: white;
+  padding: 12px;
+}
+
+.task-card p {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.secondary {
+  border-color: #888;
+  background: white;
+  color: #222;
+}
+
+.danger {
+  border-color: #a11;
+  background: #a11;
+}
+
+.error {
+  margin: 0;
+  color: #a11;
+}
+
+@media (max-width: 800px) {
+  .create-form,
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
