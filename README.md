@@ -183,3 +183,18 @@ src/common     общие фильтры и interceptors
 prisma         схема и миграции
 test           E2E-тесты
 ```
+
+## Frontend
+
+Технологии: Next.js, React, TypeScript, Socket.IO Client и Tailwind CSS.
+
+Запуск:
+
+```bash
+cd client
+cp .env.example .env.local
+bun install
+bun run dev
+```
+
+Frontend будет доступен по адресу `http://localhost:3000`. Backend должен быть запущен на `http://localhost:4000`.
